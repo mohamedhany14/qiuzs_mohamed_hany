@@ -9,19 +9,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: FacebookApp(),
+      home: QuizAPP(),
     );
   }
 }
 
-class FacebookApp extends StatelessWidget {
-  const FacebookApp({super.key});
+class QuizAPP extends StatefulWidget {
+  const QuizAPP({super.key});
 
+  @override
+  State<QuizAPP> createState() => _QuizAPPState();
+}
+
+class _QuizAPPState extends State<QuizAPP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Quiz"),
+        title: const Text("Quiz"),
         centerTitle: true,
       ),
       body: Stack(
@@ -32,10 +37,10 @@ class FacebookApp extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-          Center(
+          const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 SizedBox(
                   width: 140,
                   height: 140,
