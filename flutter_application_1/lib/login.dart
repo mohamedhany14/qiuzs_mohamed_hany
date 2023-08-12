@@ -1,14 +1,32 @@
+
 import 'package:flutter/material.dart';
 
-class loginscreen extends StatelessWidget {
-  const loginscreen({super.key});
+void main() {
+  runApp(const MyApp());
+}
 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
+    return const MaterialApp(
+      home: QuizAPP(),
+    );
+  }
+}
+
+class QuizAPP extends StatefulWidget {
+  const QuizAPP({super.key});
+
+  @override
+  State<QuizAPP> createState() => _QuizAPPState();
+}
+
+class _QuizAPPState extends State<QuizAPP> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(  
+      body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           color: Color(0xff358032),
@@ -82,7 +100,7 @@ class loginscreen extends StatelessWidget {
                           Text("new to quiz app? "),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "Register ",
                                 style: TextStyle(color: Colors.green),
                               ))
@@ -146,7 +164,10 @@ class loginscreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
+      );
+    }
 }
+
+
+
+
