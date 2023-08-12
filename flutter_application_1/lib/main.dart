@@ -32,7 +32,7 @@ class _QuizAPPState extends State<QuizAPP> {
       body: Stack(
         children: [
           Image.asset(
-            'assets/quiz photo.jpg',
+            'images/quiz photo.jpg',
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -42,8 +42,8 @@ class _QuizAPPState extends State<QuizAPP> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 140,
-                  height: 140,
+                  width: 100,
+                  height: 100,
                 ),
                 Text(
                   'ITI Quiz app',
