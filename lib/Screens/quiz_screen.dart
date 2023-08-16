@@ -12,12 +12,23 @@ class QuizScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        automaticallyImplyLeading: false,
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text("exam"), Icon(Icons.quiz_rounded)],
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          title: const Text(" test" ),
+          leading: const Center(
+              child: Text(
+            "1/1",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          )),
+          actions: const [
+            Padding(
+              padding: EdgeInsetsDirectional.only(end: 10),
+              child: Icon(Icons.quiz_rounded),
+            )
+          ],
         ),
-      ),
+      
+    
       body: Column(children: [
         const SizedBox(
           height: 40,
