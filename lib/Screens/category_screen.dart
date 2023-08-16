@@ -16,17 +16,7 @@ class CategoryScreen extends StatelessWidget {
               index: i,
             )
 
-          //     Expanded(
-          //   // بتاخد اقصى مساحة ممكنة من المساحة المتاحة
-          //   child: Container(
-          //     child: Center(
-          //       child: Text(quizName[index!]),
-          //     ),
-          //     decoration: BoxDecoration(
-          //         color: quizColor[index!],
-          //         border: Border.all(width: 1, color: Colors.black)),
-          //   ),
-          // );
+        
         ],
       ),
     );

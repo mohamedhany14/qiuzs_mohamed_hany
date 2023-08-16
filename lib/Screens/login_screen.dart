@@ -43,10 +43,6 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: 16,
             ),
-
-            // for (int i = 0;
-            //     i < 5;
-            //     i++) // For Loop: used for repeating same code
             TextField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.person),
@@ -57,12 +53,11 @@ class LoginScreen extends StatelessWidget {
                       color: Color.fromARGB(255, 36, 4, 240), width: 2),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                // border: ,
+
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.black),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                // border:
               ),
             ),
             SizedBox(
@@ -84,21 +79,15 @@ class LoginScreen extends StatelessWidget {
                   borderSide: BorderSide(color: Colors.black),
                   borderRadius: BorderRadius.circular(30),
                 ),
-                // border:
               ),
             ),
-
             SizedBox(
               height: 8,
             ),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text("New to quiz app?"),
-                // SizedBox(
-                //   width: 4,
-                // ),
                 InkWell(
                   onTap: () {
                     print("Hello we are ITI");
@@ -111,11 +100,9 @@ class LoginScreen extends StatelessWidget {
                 )
               ],
             ),
-
             SizedBox(
               height: 30,
             ),
-
             ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacement(
@@ -150,7 +137,6 @@ class LoginScreen extends StatelessWidget {
             Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
                   children: [

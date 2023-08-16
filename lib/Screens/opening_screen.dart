@@ -33,14 +33,6 @@ class OpeningScreen extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.2,
             ),
 
-            // if (MediaQuery.of(context).orientation == Orientation.landscape)
-            //   Image.asset(
-            //     "Images/quizLogo.png",
-            //     height: MediaQuery.of(context).size.height * 0.3,
-            //   ),
-
-            /// second widget :
-
             Text(
               "ITI Quiz App",
               style:
@@ -56,14 +48,7 @@ class OpeningScreen extends StatelessWidget {
               style: GoogleFonts.pacifico(fontSize: 30, color: Colors.white),
             ),
 
-            // SizedBox(
-            //   height: 100,
-            // ),
             Spacer(),
-
-            // SizedBox(
-            //   height: double.infinity,
-            // ),
 
             Container(
                 margin: EdgeInsets.symmetric(horizontal: 12, vertical: 20),
@@ -95,12 +80,3 @@ class OpeningScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-/////////
-///               Column, Row, Sizedbox, Contair
