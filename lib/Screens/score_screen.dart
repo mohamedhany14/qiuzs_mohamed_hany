@@ -7,47 +7,38 @@ class ScoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RichText(
-                text: const TextSpan(
-                    text: "Congrate ",
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                    children: [
-                  TextSpan(
-                      text: "Mohamed \n",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 196, 12, 52),
-                          fontSize: 25)),
-                  TextSpan(text: "your score is "),
-                  TextSpan(
-                      text: "6/10",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 196, 12, 52),
-                          fontSize: 25)),
-                ])),
-
-            TextButton(
+            const Text(
+              "Hello, Mohamed Your score is 1/1",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Dancingscript',
+                  fontSize: 60),
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            ElevatedButton(
                 onPressed: () {
-                 
-
-                  Navigator.pushAndRemoveUntil<void>(
+                  Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                        builder: (BuildContext context) =>
-                            const OpeningScreen()),
-                    (Route<dynamic> route) => false,
+                      builder: (BuildContext context) => const OpeningScreen(),
+                    ),
                   );
                 },
-                child: Text("Play again"))
-         
-          ],
-        ),
-      ),
+                child: const Text("Reset", style: TextStyle(fontSize: 30)),
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(300, 50),
+                  backgroundColor: Colors.teal,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100.0),
+                  ),
+                )),
+          ]),
     );
   }
 }

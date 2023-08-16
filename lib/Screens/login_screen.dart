@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
           child: Container(
             height: MediaQuery.of(context).size.height * 0.4,
             width: MediaQuery.of(context).size.width,
-            color: Color.fromARGB(255, 42, 137, 46),
+            color: Colors.teal,
             child: Center(
               child: Image.asset(
                 "Images/pngwing.com.png",
@@ -118,7 +118,7 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(
                         25.0), // Adjust the radius as needed
                   ),
-                  backgroundColor: Colors.green,
+                  backgroundColor:Colors.teal,
                   elevation: 10,
                   minimumSize: Size(130, 40)),
             ),
@@ -153,7 +153,7 @@ class LoginScreen extends StatelessWidget {
                   child: Text(
                     "Forget password",
                     style: TextStyle(
-                        color: Colors.green, fontWeight: FontWeight.bold),
+                        color: Colors.teal, fontWeight: FontWeight.bold),
                   ),
                 )
               ],

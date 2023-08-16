@@ -70,7 +70,7 @@ class OpeningScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40)),
-                      backgroundColor: Colors.green,
+                      backgroundColor: Colors.teal,
                       //  elevation: 50,
                       minimumSize: Size(60, 40)),
                 )),
