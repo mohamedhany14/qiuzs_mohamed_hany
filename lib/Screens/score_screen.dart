@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:quizz_iti_823/Screens/opening_screen.dart';
+import 'package:mohamed_quizApp/Global/quiz_data.dart';
+import 'package:mohamed_quizApp/Screens/category_screen.dart';
+import 'package:mohamed_quizApp/Screens/opening_screen.dart';
 
-class ScoreScreen extends StatelessWidget {
-  const ScoreScreen({super.key});
+class ScoreScreen extends StatefulWidget {
+  final int totalScore;
+  final int totalNumOfQuestion;
+   ScoreScreen(
+    {super.key,required this.totalScore,required this.totalNumOfQuestion});
 
+  @override
+  State<ScoreScreen> createState() => _ScoreScreenState();
+}
+
+class _ScoreScreenState extends State<ScoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,26 +21,45 @@ class ScoreScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              "Hello, Mohamed Your score is 1/1",
-              style: TextStyle(
+                   RichText(
+                text: TextSpan(
+                    text: "Congratulations ",
+                   style: TextStyle(
                   color: Colors.black,
                   fontFamily: 'Dancingscript',
-                  fontSize: 60),
-            ),
+                  fontSize: 50),
+                    children: [
+                  TextSpan(
+                      text: "${userNameController.text} \n",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 196, 12, 52),
+                          fontSize: 25)),
+                  const TextSpan(text: "your score is "),
+           
+                  TextSpan(
+                      text:
+                          "${widget.totalScore} / ${widget.totalNumOfQuestion}",
+                      style: const TextStyle(
+                          color: Color.fromARGB(255, 196, 12, 52),
+                          fontSize: 25)),
+                ])),
+            
             SizedBox(
               height: 100,
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
+                  
+                  
+                  Navigator.pushAndRemoveUntil<void>(
                     context,
                     MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const OpeningScreen(),
-                    ),
+                        builder: (BuildContext context) =>
+                            const OpeningScreen()),
+                    (Route<dynamic> route) => false,
                   );
                 },
-                child: const Text("Reset", style: TextStyle(fontSize: 30)),
+                child: const Text("play again", style: TextStyle(fontSize: 30)),
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(300, 50),
                   backgroundColor: Colors.teal,
@@ -41,4 +70,15 @@ class ScoreScreen extends StatelessWidget {
           ]),
     );
   }
+
+   @override
+  void dispose() {
+   
+    super.dispose();
+
+    userNameController.clear();
+    
+  }
 }
+
+ 

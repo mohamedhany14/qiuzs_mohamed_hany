@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mohamed_quizApp/Global/quiz_data.dart';
 
 import '../Screens/quiz_screen.dart';
 
@@ -11,8 +12,22 @@ class CategoryContainer extends StatelessWidget {
     required this.index,
   });
 
-  List quizName = ["Sport Test", "History Test", "General Test"];
-  List quizColor = [Colors.blue, Colors.red, Colors.yellow];
+  List quizName = [
+    "Sport Test",
+    "History Test",
+    "IQ Test",
+    "English test",
+    "Math test",
+    "sciense test"
+  ];
+  List quizColor = [
+    Colors.blue,
+    Colors.red,
+    Colors.green,
+    Colors.pink,
+    Colors.yellow,
+    Colors.grey
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +38,9 @@ class CategoryContainer extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute<void>(
-              builder: (BuildContext context) => const QuizScreen(),
+              builder: (BuildContext context) => QuizScreen(
+                categoryMap: dataBase[index],
+              ),
             ),
           );
         },
